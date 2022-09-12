@@ -15,4 +15,5 @@ export const List = styled.li`
     margin-left: 20px;
     margin-bottom: 2px;
     font-size: 1.3rem;
+    color:#5e5853;
 `

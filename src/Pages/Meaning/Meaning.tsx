@@ -8,6 +8,7 @@ import WordHeader from '../../Components/WordHeader/WordHeader'
 import Definitions from '../../Components/Definitions/Definitions'
 import Options from '../../Components/Options/Options'
 import { IndividualOutput, OutputDiv } from './MeaningStyled'
+import RelatedWords from '../../Components/RelatedWords/RelatedWords'
 
 const Meaning = () => {
 
@@ -36,6 +37,7 @@ const Meaning = () => {
           <Options optionSelected={optionSelected} setOptionSelected={setOptionSelected}/>
             <IndividualOutput>
               {optionSelected === 'Definition' && <Definitions wordData = {wordData}/>}
+              {optionSelected === 'Synonym' && <RelatedWords variant='Synonym' wordData= {wordData}/>}
             </IndividualOutput>
         </OutputDiv>
       </>
