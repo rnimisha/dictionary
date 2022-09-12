@@ -9,7 +9,7 @@ export const HomeContainer = styles.div`
 `
 
 export const ImageContainer = styles.div`
-    width : 20%;
+    width : 25%;
     height : auto;
     display : flex;
     justify-content: center;

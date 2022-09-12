@@ -13,6 +13,7 @@ export const ButtonStyled = styled.button`
     line-height: 50px;
     text-align: center;
     width : 200px;
+    margin-top: 15px;
 
     &:hover{
         background-color: #fff;
