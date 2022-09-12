@@ -4,12 +4,17 @@ import {useNavigate} from 'react-router-dom'
 //styles
 import { ButtonStyled } from './ButtonStyled'
 
-const Button = () => {
+//type
+type PropTypes = {
+    word : string
+}
+
+const Button = ({word}: PropTypes) => {
 
     const navitage = useNavigate()
 
     return (
-        <ButtonStyled onClick={()=>{navitage('meaning/word')}}>Search</ButtonStyled>
+        <ButtonStyled onClick={()=>{navitage(`meaning/${word}`)}}>Search</ButtonStyled>
     )
 }
 
