@@ -6,14 +6,25 @@ import logo from '../../assets/images/giflogo.gif'
 import LightLogo from '../../assets/images/catlogo.gif'
 import InputField from '../../Components/InputField/InputField'
 
-const Homepage = () => {
+type Theme = {
+  primary: string;
+  primarytext: string;
+  secondary: string;
+  secondarytext: string;
+}
+
+type Props ={
+  theme : Theme,
+  dark : Theme
+}
+const Homepage = ({theme, dark} : Props) => {
 
   const [word, setWord] = useState("")
 
   return (
     <HomeContainer>
         <ImageContainer>
-            <Image src={logo} alt="logo" />
+            <Image src={theme === dark ? logo : LightLogo} alt="logo" />
         </ImageContainer>
         <InputField word ={word} setWord={setWord}/>
     </HomeContainer>

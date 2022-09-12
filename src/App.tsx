@@ -33,10 +33,10 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <GlobalStyles/>
         <BrowserRouter>
-          <Navbar/>
+          <Navbar setTheme ={setTheme} theme ={theme} light ={light} dark ={dark}/>
           <MainContainer>
             <Routes>
-              <Route path = '/' element = {<Homepage/>}/>
+              <Route path = '/' element = {<Homepage theme ={theme} dark ={dark}/>}/>
               <Route path = '/meaning/:word' element = {<Meaning/>}/>
             </Routes>
             </MainContainer>

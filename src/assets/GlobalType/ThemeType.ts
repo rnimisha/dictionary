@@ -1,7 +1,7 @@
 export interface GlobalThemeProps {
     theme :{
         primary : string,
-        text : string,
+        primarytext : string,
         secondary : string,
         secondarytext: string
     }
