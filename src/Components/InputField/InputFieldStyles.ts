@@ -21,8 +21,8 @@ export const SearchBar= styled.input.attrs({
     margin-bottom: 30px;
     border-radius: 59px;
     background: #ededed;
-    box-shadow: inset 25px 25px 50px #d5d5d5,
-                inset -25px -25px 50px #ffffff;
+    box-shadow: inset 25px 25px 50px #d5d5d5, inset -25px -25px 50px #ffffff;
+    padding-left: 30px;
     
     &:focus{
         outline: 2px solid #E3D9D1;
