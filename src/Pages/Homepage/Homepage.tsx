@@ -2,7 +2,8 @@ import {useState} from 'react'
 
 import { HomeContainer , ImageContainer,Image} from './HomepageStyled'
 
-import logo from '../../assets/images/catlogo.gif'
+import logo from '../../assets/images/giflogo.gif'
+import LightLogo from '../../assets/images/catlogo.gif'
 import InputField from '../../Components/InputField/InputField'
 
 const Homepage = () => {

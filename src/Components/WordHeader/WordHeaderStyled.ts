@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import {BsVolumeUp} from 'react-icons/bs'
+import { GlobalThemeProps } from '../../assets/GlobalType/ThemeType'
 
 export const WordHeaderContainer = styled.div`
     margin-top: 4rem;
@@ -21,9 +22,10 @@ export const Word = styled.div`
     flex-direction: column;
 `
 
-export const WordHeading = styled.p`
+export const WordHeading = styled.p<GlobalThemeProps>`
     font-size: 3.2rem;
     font-weight: 500;
+    color : #020213;
 `
 
 export const Span = styled.span`

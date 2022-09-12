@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { GlobalThemeProps } from '../../assets/GlobalType/ThemeType'
 
 export const FormStyled = styled.form`
     width: 100%;
