@@ -19,7 +19,7 @@ export type defination = {
 }
 
 export type meanings ={
-    partOfSpeach : string,
+    partOfSpeech : string,
     definitions : defination[],
     synonyms : string[],
     antonyms : string[]

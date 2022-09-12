@@ -3,7 +3,9 @@ import {useParams} from 'react-router-dom'
 import axios from 'axios'
 
 import data from './dataType'
+
 import WordHeader from '../../Components/WordHeader/WordHeader'
+import Meanings from '../../Components/Meanings/Meanings'
 
 const Meaning = () => {
 
@@ -26,7 +28,8 @@ const Meaning = () => {
      {
       !isLoading && 
       <>
-        <WordHeader/>
+        <WordHeader wordData = {wordData} word = {word}/>
+        <Meanings wordData = {wordData}/>
       </>
      }
      {
