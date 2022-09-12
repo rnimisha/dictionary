@@ -9,3 +9,10 @@ export const NavContainer = styled.div`
     align-items: center;
     padding: 0px 20px;
 `
+
+export const Logo = styled.h2`
+    font-family: 'Pacifico', cursive;
+    color : #000;
+    text-decoration: none;
+    margin-left: 20px;
+`

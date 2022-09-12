@@ -15,15 +15,15 @@ const App = () => {
   return (
     <>
     <GlobalStyles/>
-    <Navbar/>
-    <MainContainer>
       <BrowserRouter>
-        <Routes>
-          <Route path = '/' element = {<Homepage/>}/>
-          <Route path = '/meaning/:word' element = {<Meaning/>}/>
-        </Routes>
+        <Navbar/>
+        <MainContainer>
+          <Routes>
+            <Route path = '/' element = {<Homepage/>}/>
+            <Route path = '/meaning/:word' element = {<Meaning/>}/>
+          </Routes>
+          </MainContainer>
       </BrowserRouter>
-    </MainContainer>
     </>
   )
 }

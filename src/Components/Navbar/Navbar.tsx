@@ -1,14 +1,15 @@
 import React from 'react'
+import {Link } from 'react-router-dom'
 
 //styles
-import {NavContainer} from './NavbarStyled'
+import {NavContainer, Logo} from './NavbarStyled'
 
 const Navbar = () => {
   return (
     <NavContainer>
-        <div>
-            Dictionary
-        </div>
+        <Link to='/'>
+            <Logo>Dictionary</Logo>
+        </Link>
         <div>
             Toggle Mode
         </div>
