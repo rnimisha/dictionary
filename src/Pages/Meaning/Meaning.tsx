@@ -9,12 +9,14 @@ import Definitions from '../../Components/Definitions/Definitions'
 import Options from '../../Components/Options/Options'
 import { IndividualOutput, OutputDiv } from './MeaningStyled'
 import RelatedWords from '../../Components/RelatedWords/RelatedWords'
+import Error from '../../Components/Error/Error'
 
 const Meaning = () => {
 
   const [wordData, setWordData] = useState<data | null>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [optionSelected, setOptionSelected] = useState<'Definition' | 'Synonym'| 'Antonym'>('Definition')
+  const [isDataFound, setIsDataFound] = useState(false)
 
   const params = useParams()
   const word = params.word
@@ -23,14 +25,16 @@ const Meaning = () => {
     axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`).then((response)=>{
       setWordData(response.data)
       setIsLoading(false)
+      setIsDataFound(true)
     }).catch((error)=>{
-      console.log(error)
+      setIsDataFound(false)
+      setIsLoading(false)
     })
   }, [])
   return (
     <div>
      {
-      !isLoading && 
+      !isLoading && isDataFound &&
       <>
         <WordHeader wordData = {wordData} word = {word}/>
         <OutputDiv>
@@ -42,6 +46,9 @@ const Meaning = () => {
             </IndividualOutput>
         </OutputDiv>
       </>
+     }
+     {
+      !isLoading && !isDataFound && <Error/>
      }
      {
       isLoading && <p>Loading....</p>

@@ -25,7 +25,13 @@ export type meanings ={
     antonyms : string[]
 }
 
-export type data = {
+export type error={
+    title : string,
+    message : string,
+    resolution : string
+}
+
+export type valid = {
     word : string,
     phonetic ?: string
     phonetics ?: phonetics[],
@@ -33,5 +39,6 @@ export type data = {
     license : license,
     sourceUrls : string[]
 }[]
+export type data = valid | error
 
 export default data

@@ -1,6 +1,6 @@
-import styles from 'styled-components'
+import styled from 'styled-components'
 
-export const HomeContainer = styles.div`
+export const HomeContainer = styled.div`
     display : flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +8,7 @@ export const HomeContainer = styles.div`
     flex-direction : column;
 `
 
-export const ImageContainer = styles.div`
+export const ImageContainer = styled.div`
     width : 25%;
     height : auto;
     display : flex;
@@ -16,7 +16,7 @@ export const ImageContainer = styles.div`
     align-items : center;
 `
 
-export const Image = styles.img`
+export const Image = styled.img`
     width : 100%;
     height : auto;
 `
