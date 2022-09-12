@@ -5,8 +5,9 @@ import axios from 'axios'
 import data from './dataType'
 
 import WordHeader from '../../Components/WordHeader/WordHeader'
-import Meanings from '../../Components/Meanings/Meanings'
+import Definitions from '../../Components/Definitions/Definitions'
 import Options from '../../Components/Options/Options'
+import { IndividualOutput, OutputDiv } from './MeaningStyled'
 
 const Meaning = () => {
 
@@ -30,10 +31,12 @@ const Meaning = () => {
       !isLoading && 
       <>
         <WordHeader wordData = {wordData} word = {word}/>
-        <div>
+        <OutputDiv>
           <Options/>
-          <Meanings wordData = {wordData}/>
-        </div>
+            <IndividualOutput>
+              <Definitions wordData = {wordData}/>
+            </IndividualOutput>
+        </OutputDiv>
       </>
      }
      {

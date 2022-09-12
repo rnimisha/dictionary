@@ -1,30 +1,31 @@
 import React from 'react'
 
 import data from '../../Pages/Meaning/dataType'
+import { PartOfSpeech, List, DefinationList } from './DefinitionsStyled'
 
 type PropType = {
   wordData : data | null
 }
 
-const Meanings = ({wordData} : PropType) => {
+const Definitions = ({wordData} : PropType) => {
   return (
 
-    <div>
+    <div> 
       {
         wordData?.map((items)=>{
-          return items?.meanings.map((meaningsArr)=>{
+          return items?.meanings.map((meaningsArr, index)=>{
             return (
                 <>
-                    <h3>{meaningsArr?.partOfSpeech}</h3>
-                    <ul>
+                    <PartOfSpeech>{meaningsArr?.partOfSpeech}</PartOfSpeech>
+                    <DefinationList>
                       {
                       meaningsArr?.definitions.map((def, id)=>{
                         return (
-                          <li key = {id}>{def.definition}</li>
+                          <List key = {id}>  {def.definition}</List>
                         )
                       })
                       }
-                    </ul>
+                    </DefinationList>
                   
                 </>
             )
@@ -35,4 +36,4 @@ const Meanings = ({wordData} : PropType) => {
   )
 }
 
-export default Meanings
+export default Definitions

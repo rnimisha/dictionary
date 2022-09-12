@@ -15,7 +15,7 @@ interface Props {
 
 export const MiniDiv = styled.div<Props>`
     font-size: 1.4rem;
-    color : ${(props) => props.active === true ? '#96887d' : '#7a7979'};
+    color : ${(props) => props.active === true ? '#5e5853' : '#7a7979'};
     position: relative;
 
 `
@@ -24,7 +24,7 @@ export const Span = styled.span<Props>`
     cursor: pointer;
 
     &:hover{
-        color : #5e5853;
+        color : #96887d;
     }
 
     &::after{
@@ -34,14 +34,14 @@ export const Span = styled.span<Props>`
         left: 0;
         width: 100%;
         height: 0.1em;
-        background-color: #96887d;
+        background-color: #5e5853;
         opacity: ${(props)=>props.active === true ? 1 : 0};
         transition: opacity 300ms, transform 300ms;
     }
 
     &:hover::after,
     &:focus::after {
-        background-color: #5e5853;
+        background-color: #96887d;
         opacity: 1;
         transform: translate3d(0, 0.2em, 0);
         transform: translate3d(-100%, 0, 0);
