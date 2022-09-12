@@ -3,6 +3,7 @@ import {useParams} from 'react-router-dom'
 import axios from 'axios'
 
 import data from './dataType'
+import WordHeader from '../../Components/WordHeader/WordHeader'
 
 const Meaning = () => {
 
@@ -23,9 +24,13 @@ const Meaning = () => {
   return (
     <div>
      {
-      !isLoading && wordData?.map((item)=>{
-            return (item?.word)
-      })
+      !isLoading && 
+      <>
+        <WordHeader/>
+      </>
+     }
+     {
+      isLoading && <p>Loading....</p>
      }
     </div>
   )
