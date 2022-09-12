@@ -9,24 +9,22 @@ const Meaning = () => {
   const [wordData, setWordData] = useState<data | null>(null)
   const [isLoading, setIsLoading] = useState(true)
 
+  const params = useParams()
+  const word = params.word
+
   useEffect(() => {
-    axios.get('https://api.dictionaryapi.dev/api/v2/entries/en/apple').then((response)=>{
+    axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`).then((response)=>{
       setWordData(response.data)
       setIsLoading(false)
     }).catch((error)=>{
       console.log(error)
     })
   }, [])
-
-
-  const params = useParams()
-  const word = params.word
   return (
     <div>
      {
       !isLoading && wordData?.map((item)=>{
-            console.log(item?.word)
-            return 'test'
+            return (item?.word)
       })
      }
     </div>
