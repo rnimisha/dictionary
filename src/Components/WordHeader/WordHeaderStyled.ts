@@ -31,6 +31,7 @@ export const Span = styled.span`
     color : #7a7979;
     margin-left: 3px;
     font-style: italic;
+    margin-top: -5px;
 `
 
 export const VolumeIcon = styled(BsVolumeUp)`
