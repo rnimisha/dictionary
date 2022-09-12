@@ -1,6 +1,8 @@
 import React from 'react'
-import { ButtonStyled } from './ButtonStyled'
 import {useNavigate} from 'react-router-dom'
+
+//styles
+import { ButtonStyled } from './ButtonStyled'
 
 const Button = () => {
 

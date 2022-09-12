@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-
 export const FormStyled = styled.form`
     width: 100%;
     margin-top : -13px;

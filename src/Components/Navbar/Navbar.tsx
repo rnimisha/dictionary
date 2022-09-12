@@ -1,4 +1,6 @@
 import React from 'react'
+
+//styles
 import {NavContainer} from './Navbar.styles'
 
 const Navbar = () => {

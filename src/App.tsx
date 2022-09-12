@@ -1,11 +1,15 @@
+//libary and packages
 import React from 'react'
+import {Route, Routes, BrowserRouter} from 'react-router-dom'
+
+//styles
 import GlobalStyles from './assets/styles/GlobalStylesStyled'
 import { MainContainer } from './assets/styles/MainContainerStyled'
+
+// components
+import Meaning from './Pages/Meaning/Meaning'
 import Navbar from './Components/Navbar/Navbar'
 import Homepage from './Pages/Homepage/Homepage'
-
-import {Route, Routes, BrowserRouter} from 'react-router-dom'
-import Meaning from './Pages/Meaning/Meaning'
 
 const App = () => {
   return (

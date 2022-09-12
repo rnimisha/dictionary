@@ -1,4 +1,6 @@
 import React from 'react'
+
+//styles
 import {SearchBar, FormStyled} from './InputFieldStyles'
 
 const InputField = () => {
