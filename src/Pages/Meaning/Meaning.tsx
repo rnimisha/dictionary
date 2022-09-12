@@ -38,6 +38,7 @@ const Meaning = () => {
             <IndividualOutput>
               {optionSelected === 'Definition' && <Definitions wordData = {wordData}/>}
               {optionSelected === 'Synonym' && <RelatedWords variant='Synonym' wordData= {wordData}/>}
+              {optionSelected === 'Antonym' && <RelatedWords variant='Antonym' wordData= {wordData}/>}
             </IndividualOutput>
         </OutputDiv>
       </>
