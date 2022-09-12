@@ -1,10 +1,13 @@
 import React from 'react'
+import GlobalStyles from './assets/styles/GlobalStyles'
+import Homepage from './Pages/Homepage'
 
 const App = () => {
   return (
-    <div>
-      Dictionary App
-    </div>
+    <>
+    <GlobalStyles/>
+    <Homepage/>
+    </>
   )
 }
 
