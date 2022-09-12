@@ -6,6 +6,7 @@ import data from './dataType'
 
 import WordHeader from '../../Components/WordHeader/WordHeader'
 import Meanings from '../../Components/Meanings/Meanings'
+import Options from '../../Components/Options/Options'
 
 const Meaning = () => {
 
@@ -29,7 +30,10 @@ const Meaning = () => {
       !isLoading && 
       <>
         <WordHeader wordData = {wordData} word = {word}/>
-        <Meanings wordData = {wordData}/>
+        <div>
+          <Options/>
+          <Meanings wordData = {wordData}/>
+        </div>
       </>
      }
      {

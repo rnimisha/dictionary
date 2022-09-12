@@ -8,30 +8,29 @@ type PropType = {
 
 const Meanings = ({wordData} : PropType) => {
   return (
+
     <div>
-      <div>
-        {
-          wordData?.map((items)=>{
-            return items?.meanings.map((meaningsArr)=>{
-              return (
-                  <>
-                      <h3>{meaningsArr?.partOfSpeech}</h3>
-                      <div>
-                        {
-                        meaningsArr?.definitions.map((def, id)=>{
-                          return (
-                            <li key = {id}>{def.definition}</li>
-                          )
-                        })
-                        }
-                      </div>
-                    
-                  </>
-              )
-            })
+      {
+        wordData?.map((items)=>{
+          return items?.meanings.map((meaningsArr)=>{
+            return (
+                <>
+                    <h3>{meaningsArr?.partOfSpeech}</h3>
+                    <ul>
+                      {
+                      meaningsArr?.definitions.map((def, id)=>{
+                        return (
+                          <li key = {id}>{def.definition}</li>
+                        )
+                      })
+                      }
+                    </ul>
+                  
+                </>
+            )
           })
-        }
-      </div>
+        })
+      }
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 
 //styles
-import {NavContainer} from './Navbar.styles'
+import {NavContainer} from './NavbarStyled'
 
 const Navbar = () => {
   return (
