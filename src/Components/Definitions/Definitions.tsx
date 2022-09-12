@@ -9,7 +9,7 @@ type PropType = {
 
 const Definitions = ({wordData} : PropType) => {
   return (
-
+    
     <div> 
       {
         wordData?.map((items)=>{

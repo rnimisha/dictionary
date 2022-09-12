@@ -13,6 +13,7 @@ const Meaning = () => {
 
   const [wordData, setWordData] = useState<data | null>(null)
   const [isLoading, setIsLoading] = useState(true)
+  const [optionSelected, setOptionSelected] = useState<'Definition' | 'Synonym'| 'Antonym'>('Definition')
 
   const params = useParams()
   const word = params.word
@@ -32,9 +33,9 @@ const Meaning = () => {
       <>
         <WordHeader wordData = {wordData} word = {word}/>
         <OutputDiv>
-          <Options/>
+          <Options optionSelected={optionSelected} setOptionSelected={setOptionSelected}/>
             <IndividualOutput>
-              <Definitions wordData = {wordData}/>
+              {optionSelected === 'Definition' && <Definitions wordData = {wordData}/>}
             </IndividualOutput>
         </OutputDiv>
       </>
