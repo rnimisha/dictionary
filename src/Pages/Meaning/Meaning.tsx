@@ -48,10 +48,10 @@ const Meaning = () => {
       </>
      }
      {
-      !isLoading && !isDataFound && <Error/>
+      !isLoading && !isDataFound && <Error variant ='error'/>
      }
      {
-      isLoading && <p>Loading....</p>
+      isLoading && <Error variant='loading'/>
      }
     </div>
   )
