@@ -2,8 +2,8 @@ import React from 'react'
 
 import { HomeContainer , ImageContainer,Image} from './HomepageStyled'
 
-import logo from '../../assets/images/logo3.webp'
-import InputField from '../../Components/Navbar/InputField/InputField'
+import logo from '../../assets/images/giflogo.gif'
+import InputField from '../../Components/InputField/InputField'
 
 const Homepage = () => {
   return (
