@@ -2,6 +2,7 @@
 import {useState} from 'react'
 import {Route, Routes, BrowserRouter} from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
+import {AnimatePresence} from 'framer-motion'
 
 //styles
 import GlobalStyles from './assets/styles/GlobalStylesStyled'
@@ -32,6 +33,7 @@ const App = () => {
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyles/>
+        <AnimatePresence exitBeforeEnter>
         <BrowserRouter>
           <Navbar setTheme ={setTheme} theme ={theme} light ={light} dark ={dark}/>
           <MainContainer>
@@ -41,6 +43,7 @@ const App = () => {
             </Routes>
             </MainContainer>
         </BrowserRouter>
+        </AnimatePresence>
       </ThemeProvider>
     </>
   )

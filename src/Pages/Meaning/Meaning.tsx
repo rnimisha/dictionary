@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom'
 import axios from 'axios'
+import {motion} from 'framer-motion';
 
 import data from './dataType'
 
@@ -24,19 +25,22 @@ const Meaning = () => {
   useEffect(() => {
     axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`).then((response)=>{
       setWordData(response.data)
-      setIsLoading(false)
       setIsDataFound(true)
     }).catch((error)=>{
       setIsDataFound(false)
+    }).finally(()=>{
       setIsLoading(false)
     })
   }, [])
   return (
-    <div>
+    <motion.div initial={{opacity: 0}}
+    animate={{opacity: 1}}
+    exit={{opacity: 1}}
+    transition={{ease:"circOut",type:"tween",duration: 2}}>
      {
       !isLoading && isDataFound &&
       <>
-        <WordHeader wordData = {wordData} word = {word}/>
+        <WordHeader wordData = {wordData} word = {word} />
         <OutputDiv>
           <Options optionSelected={optionSelected} setOptionSelected={setOptionSelected}/>
             <IndividualOutput>
@@ -53,7 +57,7 @@ const Meaning = () => {
      {
       isLoading && <Error variant='loading'/>
      }
-    </div>
+    </motion.div>
   )
 }
 

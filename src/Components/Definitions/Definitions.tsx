@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import data from '../../Pages/Meaning/dataType'
 import { PartOfSpeech, List, DefinationList } from './DefinitionsStyled'
@@ -15,7 +15,7 @@ const Definitions = ({wordData} : PropType) => {
         wordData?.map((items)=>{
           return items?.meanings.map((meaningsArr, index)=>{
             return (
-                <>
+                <React.Fragment key ={index}>
                     <PartOfSpeech>{meaningsArr?.partOfSpeech}</PartOfSpeech>
                     <DefinationList>
                       {
@@ -27,7 +27,7 @@ const Definitions = ({wordData} : PropType) => {
                       }
                     </DefinationList>
                   
-                </>
+                </React.Fragment>
             )
           })
         })
