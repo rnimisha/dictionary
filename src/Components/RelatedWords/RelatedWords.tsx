@@ -1,9 +1,9 @@
 import React from 'react'
-import { BsChevronDoubleLeft } from 'react-icons/bs'
 
 import data from '../../Pages/Meaning/dataType'
 import { RelatedWordDiv, Word } from './RelatedWordsStyled'
 
+//types
 type PropsType = {
     variant :'Synonym'| 'Antonym',
     wordData : data | null

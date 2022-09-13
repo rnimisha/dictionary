@@ -1,16 +1,21 @@
+//packages and libraries
 import React, {useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom'
 import axios from 'axios'
 import {motion} from 'framer-motion';
 
+//types
 import data from './dataType'
 
+//Components
 import WordHeader from '../../Components/WordHeader/WordHeader'
 import Definitions from '../../Components/Definitions/Definitions'
 import Options from '../../Components/Options/Options'
-import { IndividualOutput, OutputDiv } from './MeaningStyled'
 import RelatedWords from '../../Components/RelatedWords/RelatedWords'
 import Error from '../../Components/Error/Error'
+
+//styles
+import { IndividualOutput, OutputDiv } from './MeaningStyled'
 
 const Meaning = () => {
 

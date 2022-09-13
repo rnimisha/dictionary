@@ -5,6 +5,7 @@ import data from '../../Pages/Meaning/dataType'
 //styles
 import {WordHeaderContainer, Word, WordHeading, Span, VolumeIcon} from './WordHeaderStyled'
 
+//types
 type PropType = {
     wordData : data | null,
     word : string | undefined

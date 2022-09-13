@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 //styles
 import {SearchBar, FormStyled, ButtonStyled} from './InputFieldStyles'
 
+//types
 type PropTypes ={
   word : string,
   setWord : React.Dispatch<React.SetStateAction<string>>
@@ -13,7 +14,6 @@ type PropTypes ={
 
 const InputField = ({word, setWord}: PropTypes) => {
   const navitage = useNavigate()
-
 
   const searchMeaning = (e: React.FormEvent)=>{
     e.preventDefault();

@@ -5,7 +5,7 @@ import {Link } from 'react-router-dom'
 import {NavContainer, Logo} from './NavbarStyled'
 import './toggle.css'
 
-
+//types
 type Theme = {
   primary: string;
   primarytext: string;
