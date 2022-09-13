@@ -23,10 +23,10 @@ const Homepage = ({theme, dark} : Props) => {
   const [word, setWord] = useState("")
 
   return (
-    <HomeContainer as={motion.div} initial={{opacity: 0}}
-    animate={{opacity: 1}}
-    exit={{opacity: 1, x: '100vw'}}
-    transition={{ease:"circOut",type:"tween",duration: 2}}>
+    <HomeContainer as={motion.div} initial={{opacity: 0, scale : 0}}
+    animate={{opacity: 1, scale : 1}}
+    exit={{opacity: 1, scale : -1}}
+    transition={{ease:"circOut",type:"tween",duration: 1.5}}>
         <ImageContainer>
             <Image src={theme === dark ? logo : LightLogo} alt="logo" />
         </ImageContainer>

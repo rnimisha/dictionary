@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom'
 import axios from 'axios'
 import {motion} from 'framer-motion';
@@ -20,7 +20,7 @@ const Meaning = () => {
   const [isDataFound, setIsDataFound] = useState(false)
 
   const params = useParams()
-  const word = params.word
+  const word = (params.word)?.toLowerCase()
 
   useEffect(() => {
     axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`).then((response)=>{
@@ -32,6 +32,7 @@ const Meaning = () => {
       setIsLoading(false)
     })
   }, [])
+
   return (
     <motion.div initial={{opacity: 0}}
     animate={{opacity: 1}}
@@ -39,9 +40,12 @@ const Meaning = () => {
     transition={{ease:"circOut",type:"tween",duration: 2}}>
      {
       !isLoading && isDataFound &&
-      <>
+      <motion.div initial={{opacity: 0, scale: 0}}
+      animate={{opacity: 1,scale : 1}}
+      exit={{opacity: 1}}
+      transition={{ease:"circOut",type:"tween",duration: 1.5}}>
         <WordHeader wordData = {wordData} word = {word} />
-        <OutputDiv>
+        <OutputDiv >
           <Options optionSelected={optionSelected} setOptionSelected={setOptionSelected}/>
             <IndividualOutput>
               {optionSelected === 'Definition' && <Definitions wordData = {wordData}/>}
@@ -49,7 +53,7 @@ const Meaning = () => {
               {optionSelected === 'Antonym' && <RelatedWords variant='Antonym' wordData= {wordData}/>}
             </IndividualOutput>
         </OutputDiv>
-      </>
+      </motion.div>
      }
      {
       !isLoading && !isDataFound && <Error variant ='error'/>
