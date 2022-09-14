@@ -12,5 +12,5 @@ The project was done to practice styled component with typescript.
 
 - Search meaning of english world with its synonyms and antonyms.
 - Playable pronunciation audio.
-
+- Dark and Light Mode.
 
