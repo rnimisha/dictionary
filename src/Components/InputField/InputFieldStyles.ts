@@ -11,8 +11,8 @@ export const FormStyled = styled.form`
 `
 
 export const SearchBar= styled.input.attrs({
-    type : 'text'
-})`
+        type : 'text'
+    })`
     width : 70%;
     border:none;
     background: none;
@@ -27,6 +27,11 @@ export const SearchBar= styled.input.attrs({
     
     &:focus{
         outline: 2px solid #E3D9D1;
+    }
+
+    @media (max-width: 500px) {
+        width : 90%;
+        padding:10px 5px 10px 5px;
     }
 `
 
@@ -47,5 +52,11 @@ export const ButtonStyled = styled.button`
 
     &:hover{
         background-color: #fff;
+    }
+
+    @media (max-width: 500px) {
+        width : 50%;
+        font-size: 1rem;
+        padding: 2px 20px;
     }
 `

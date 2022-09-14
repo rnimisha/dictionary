@@ -7,6 +7,11 @@ export const OptionContainer = styled.div`
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
+
+    @media (max-width: 350px) {
+        flex-direction: column;
+        margin-top : 10px;
+    }
 `
 
 interface Props {
@@ -46,6 +51,10 @@ export const Span = styled.span<Props>`
         transform: translate3d(0, 0.2em, 0);
         transform: translate3d(-100%, 0, 0);
         transform: translate3d(0, 0, 0);
+    }
+
+    @media (max-width: 500px) {
+        font-size: 1rem;
     }
 
 `

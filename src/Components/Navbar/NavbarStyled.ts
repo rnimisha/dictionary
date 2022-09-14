@@ -10,6 +10,12 @@ export const NavContainer = styled.div<GlobalThemeProps>`
     align-items: center; 
     padding: 0px 20px;
     color :${(props)=>props.theme.text};
+
+    @media only screen and (max-width: 290px) {
+        flex-direction: column;
+        height: 13vh;
+        padding-bottom: 10px;
+    }
 `
 
 export const Logo = styled.h2<GlobalThemeProps>`

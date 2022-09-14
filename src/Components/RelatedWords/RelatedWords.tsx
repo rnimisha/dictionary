@@ -14,9 +14,9 @@ const RelatedWords = ({variant, wordData} : PropsType) => {
         <div>
             {
                 wordData?.map((items)=>{
-                    return items?.meanings.map((meaningsArr)=>{
+                    return items?.meanings.map((meaningsArr, id)=>{
                     return (
-                        <>
+                        <React.Fragment key ={id}>
                             {variant === 'Synonym' ?  
                                 <RelatedWordDiv>
                                     {
@@ -40,7 +40,7 @@ const RelatedWords = ({variant, wordData} : PropsType) => {
                                     }
                                 </RelatedWordDiv>
                              }
-                        </>
+                        </React.Fragment>
                     )
                     })
                 })

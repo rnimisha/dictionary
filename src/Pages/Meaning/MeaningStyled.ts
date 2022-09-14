@@ -10,5 +10,8 @@ export const OutputDiv = styled.div`
 export const IndividualOutput = styled.div`
     width: 100%;
     padding: 10px 50px;
+    @media (max-width: 500px) {
+        padding : 5px 10px;
+    }
 
 `

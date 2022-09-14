@@ -13,4 +13,14 @@ export const Word = styled.li<GlobalThemeProps>`
     font-size: 1.3rem;
     list-style-type: circle;
     color:${(props)=>props.theme.primarytext};
+
+    @media (max-width: 980px) {
+        width: 50%;
+        font-size: 1rem;
+    }
+
+    @media (max-width: 500px) {
+        width: 100%;
+        font-size: 1rem;
+    }
 `
